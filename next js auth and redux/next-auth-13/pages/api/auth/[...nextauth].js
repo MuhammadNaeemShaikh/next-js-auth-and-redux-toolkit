@@ -1,5 +1,5 @@
 import NextAuth from 'next-auth';
-import CredentialsProvider from 'next-auth/providers';
+import CredentialsProvider from 'next-auth/providers/credentials';
 import userSchema from '../../../models/userSchema';
 import bcrypt from 'bcryptjs';
 import dbConnect from '../../../config/dbConnect';
@@ -14,20 +14,19 @@ export default NextAuth({
         dbConnect();
 
         const { email, password } = credientials;
-        console.log(email, password);
         const user = await userSchema.findOne({ email });
         if (!user) {
-          throw new Error('Invalid Email or Password');
+          throw new Error('Invalid Email');
         }
 
         const isPasswordMatched = await bcrypt.compare(password, user.password);
 
         if (!isPasswordMatched) {
-          throw new Error('Invalid Email or Password');
+          throw new Error('Invalid Password');
         }
-
         return user;
       },
     }),
   ],
+  secret: 'CodingWithNaeem',
 });

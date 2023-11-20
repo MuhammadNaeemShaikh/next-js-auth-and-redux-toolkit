@@ -8,8 +8,19 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
+
+    try {
+      const data = await signIn('credentials', {
+        redirect: false,
+        email,
+        password,
+      });
+
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
