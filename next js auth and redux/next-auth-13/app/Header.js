@@ -5,7 +5,6 @@ import { signOut } from 'next-auth/react';
 
 const Header = () => {
   const { data } = useSession();
-  console.log('data', data);
 
   useEffect(() => {}, []);
   return (

@@ -1,0 +1,11 @@
+.container {
+  @apply flex;
+}
+
+.menu {
+  @apply flex-1 p-[20px];
+}
+
+.content {
+  @apply flex-[4] p-[20px];
+}
