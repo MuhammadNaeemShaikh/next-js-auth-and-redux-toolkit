@@ -36,12 +36,12 @@ export const menuItems: MenuItemsType = [
       },
       {
         title: 'Users',
-        path: '/dashboard/users',
+        path: '/dashboard/user',
         icon: <MdSupervisedUserCircle />,
       },
       {
         title: 'Products',
-        path: '/dashboard/products',
+        path: '/dashboard/product',
         icon: <MdShoppingBag />,
       },
       {

@@ -1,0 +1,23 @@
+.container {
+  @apply flex justify-between items-center bg-backgroundSoft flex-wrap p-5 rounded-[10px];
+}
+
+.menu {
+  @apply flex gap-5 flex-wrap justify-between items-center;
+}
+
+.search {
+  @apply flex justify-between items-center gap-[10px] bg-[#2e374a] flex-wrap p-[10px] rounded-[10px];
+}
+
+.icons {
+  @apply flex items-center justify-between gap-5 flex-wrap;
+}
+
+.title {
+  @apply font-bold text-textSoft capitalize;
+}
+
+.input {
+  @apply bg-transparent border-none text-textColor;
+}

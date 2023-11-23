@@ -1,0 +1,7 @@
+.container {
+  @apply p-[20px] flex items-center hover:bg-[#2e374a] my-[5px] rounded-[5px];
+}
+
+.active {
+  @apply bg-[#2e374a];
+}

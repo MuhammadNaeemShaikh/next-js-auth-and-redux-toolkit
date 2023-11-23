@@ -1,11 +1,15 @@
-.container {
-  @apply flex;
+.Wrapper {
+  @apply flex gap-5 p-5 flex-wrap;
 }
 
-.menu {
-  @apply flex-1 p-[20px];
+.main {
+  @apply md:flex-[3] flex-wrap flex-col gap-5;
 }
 
-.content {
-  @apply flex-[4] p-[20px];
+.side {
+  @apply md:flex-[1] flex-wrap;
+}
+
+.card {
+  @apply flex flex-row flex-wrap gap-5 justify-between;
 }

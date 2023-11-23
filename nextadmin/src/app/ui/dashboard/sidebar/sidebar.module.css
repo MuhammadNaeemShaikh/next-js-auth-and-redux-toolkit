@@ -1,0 +1,31 @@
+.container {
+  @apply sticky md:block;
+}
+
+.user {
+  @apply flex space-x-3 items-center;
+}
+
+.userDetail {
+  @apply flex flex-col uppercase;
+}
+
+.userName {
+  @apply tracking-wide font-bold text-lg;
+}
+
+.userTitle {
+  @apply text-[9px] text-textSoft;
+}
+
+.list {
+  @apply list-none;
+}
+
+.cat {
+  @apply font-bold text-[13px] text-textSoft my-[10px];
+}
+
+.logout {
+  @apply p-5 mx-[5px] flex gap-[10px]  cursor-pointer rounded-[10px] bg-none w-full border-none items-center hover:bg-[#2e374a];
+}

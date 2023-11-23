@@ -1,0 +1,38 @@
+.container {
+  @apply bg-backgroundSoft p-5 rounded-[10px] overflow-x-auto;
+}
+
+.title {
+  @apply mb-5 text-textSoft font-[800];
+}
+
+.table {
+  @apply w-full;
+}
+
+.td {
+  @apply p-[10px];
+}
+
+.user {
+  @apply flex gap-[10px] items-center;
+}
+.image {
+  @apply w-8 h-8 rounded-full object-cover;
+}
+
+.status {
+  @apply rounded-[5px] p-[5px] py-[3px]  text-[14px] text-white w-fit;
+}
+
+.pending {
+  @apply bg-[#f7cb7375];
+}
+
+.done {
+  @apply bg-[#afd6ee75];
+}
+
+.cancelled {
+  @apply bg-[#f7737375];
+}
