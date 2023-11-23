@@ -1,5 +1,5 @@
 .container {
-  @apply bg-backgroundSoft p-5 rounded-[10px] overflow-x-auto;
+  @apply bg-backgroundSoft p-5 rounded-[10px];
 }
 
 .title {
@@ -15,7 +15,7 @@
 }
 
 .user {
-  @apply flex gap-[10px] items-center;
+  @apply flex gap-[10px] items-center flex-wrap;
 }
 .image {
   @apply w-8 h-8 rounded-full object-cover;

@@ -1,0 +1,32 @@
+.container {
+  @apply md:fixed;
+}
+
+.item {
+  @apply relative bg-gradient-to-t from-[#182237] via-transparent to-[#253352]  py-[20px]  px-[24px]
+  rounded-[10px];
+}
+
+.bgContainer {
+  @apply absolute bottom-0 right-0 w-[50%] h-[50%] -z-50;
+}
+
+.image {
+  @apply object-contain opacity-10;
+}
+
+.texts {
+  @apply flex gap-2 flex-col;
+}
+
+.notification {
+  @apply font-bold;
+}
+
+.title {
+  @apply font-[500px] text-[12px] text-textSoft;
+}
+
+.button {
+  @apply flex items-center gap-[10px] bg-[#5d57c9] text-white cursor-pointer border-none rounded-[5px] p-[10px] w-max;
+}
