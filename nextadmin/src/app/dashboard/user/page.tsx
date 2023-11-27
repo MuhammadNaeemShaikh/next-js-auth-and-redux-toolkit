@@ -48,10 +48,10 @@ const user = () => {
                   <button className={`${styles.view} ${styles.button}`}>
                     View
                   </button>
-                  <button className={`${styles.dlt} ${styles.button}`}>
-                    Delete
-                  </button>
                 </Link>
+                <button className={`${styles.dlt} ${styles.button}`}>
+                  Delete
+                </button>
               </div>
             </td>
           </tr>
