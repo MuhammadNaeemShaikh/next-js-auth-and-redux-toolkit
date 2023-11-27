@@ -1,0 +1,12 @@
+.container {
+  @apply flex flex-wrap justify-between items-center text-textSoft
+  mt-7;
+}
+
+.logo {
+  @apply font-bold;
+}
+
+.text {
+  @apply text-[12px];
+}

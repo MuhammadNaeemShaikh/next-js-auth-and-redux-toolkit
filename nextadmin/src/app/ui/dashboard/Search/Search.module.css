@@ -1,0 +1,7 @@
+.container {
+  @apply flex flex-wrap items-center gap-2 p-[10px] bg-[#2e374a] rounded-[10px] w-max;
+}
+
+.input {
+  @apply bg-transparent border-none outline-none text-textColor;
+}

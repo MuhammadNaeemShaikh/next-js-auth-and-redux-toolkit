@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from '../ui/dashboard/sidebar/sidebar';
 import Navbar from '../ui/dashboard/navbar/navbar';
 import Style from '../ui/dashboard/dashboard.module.css';
+import Footer from '../ui/dashboard/footer/footer';
 
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -12,6 +13,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
       <div className="md:flex-[4] p-[20px]">
         <Navbar />
         {children}
+        <Footer />
       </div>
     </div>
   );

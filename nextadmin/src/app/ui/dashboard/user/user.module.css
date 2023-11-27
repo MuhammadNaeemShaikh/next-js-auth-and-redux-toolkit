@@ -1,0 +1,43 @@
+.container {
+  @apply p-[20px] bg-backgroundSoft rounded-[10px] mt-[10px];
+}
+
+.top {
+  @apply flex justify-between items-center flex-wrap;
+}
+
+.btn {
+  @apply p-[10px] bg-[#5d57c9] text-textColor border-none rounded-[10px] cursor-pointer;
+}
+
+.table {
+  @apply w-[90%] overflow-auto;
+}
+
+.table td {
+  @apply p-[10px];
+}
+
+.user {
+  @apply flex gap-[10px] items-center;
+}
+
+.userImg {
+  @apply rounded-full  object-cover;
+}
+
+.viewAndDltBtn {
+  @apply flex gap-[10px] flex-wrap;
+}
+
+.button {
+  @apply py-[10px] px-[5px] rounded-[5px] text-textColor border-none cursor-pointer ;
+}
+
+.view {
+  @apply bg-teal-500;
+}
+
+.dlt {
+  @apply bg-[#DC143C];
+}
