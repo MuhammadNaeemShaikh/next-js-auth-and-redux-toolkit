@@ -4,7 +4,7 @@ module.exports = {
     create: (data, callback) => {
         try {
             pool.query(
-                'INSERT INTO user (firstName, lastName, gender, email, password, number,salt) VALUES (?, ?, ?, ?, ?, ?,?)',
+                'INSERT INTO user (firstName, lastName, gender, email, password, number,salt,role) VALUES (?, ?, ?, ?, ?, ?,?,?)',
                 [
                     data.firstName,
                     data.lastName,
@@ -12,7 +12,8 @@ module.exports = {
                     data.email,
                     data.password,
                     data.number,
-                    data.salt
+                    data.salt,
+                    data.role
                 ],
                 (error, results, fields) => {
                     if (error) {
@@ -26,19 +27,21 @@ module.exports = {
             console.log(error);
         }
     },
-    getUsers: (callback) => {
+    getUsers: () => {
         try {
-            pool.query(
-                `SELECT * from user`,
-                [],
-                (err, results, fields) => {
-                    if (err) {
-                        return callback(error);
-
+            return new Promise((resolve, reject) => {
+                pool.query(
+                    `SELECT * from user`,
+                    [],
+                    (err, results, fields) => {
+                        if (err) {
+                            reject(err);
+                        } else {
+                            resolve(results);
+                        }
                     }
-                    return callback(null, results)
-                }
-            )
+                );
+            });
 
         } catch (error) {
             console.log(`Error in Getting User`, error);
@@ -62,21 +65,20 @@ module.exports = {
             console.log("Error In Get User By Id", error);
         }
     },
-    getUserByEmail: (id, callback) => {
-        try {
+    getUserByEmail: async (id) => {
+        return new Promise((resolve, reject) => {
             pool.query(
                 `SELECT * FROM user WHERE email = ?`,
                 [id],
                 (err, results, fields) => {
                     if (err) {
-                        return callback(err)
+                        reject(err);
+                    } else {
+                        resolve(results);
                     }
-                    callback(null, results)
                 }
-            )
-        } catch (error) {
-            console.log(`Error in Getting user By Email`);
-        }
+            );
+        });
     }
 };
 
