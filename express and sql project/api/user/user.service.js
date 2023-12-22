@@ -4,7 +4,7 @@ module.exports = {
     create: (data, callback) => {
         try {
             pool.query(
-                'INSERT INTO user (firstName, lastName, gender, email, password, number,salt,role) VALUES (?, ?, ?, ?, ?, ?,?,?)',
+                'INSERT INTO users (first_name, last_name, gender, email, password, number,salt,role) VALUES (?, ?, ?, ?, ?, ?,?,?)',
                 [
                     data.firstName,
                     data.lastName,
@@ -68,7 +68,7 @@ module.exports = {
     getUserByEmail: async (id) => {
         return new Promise((resolve, reject) => {
             pool.query(
-                `SELECT * FROM user WHERE email = ?`,
+                `SELECT * FROM users WHERE email = ?`,
                 [id],
                 (err, results, fields) => {
                     if (err) {
