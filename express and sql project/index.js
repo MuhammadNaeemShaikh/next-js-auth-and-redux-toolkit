@@ -6,8 +6,10 @@ const productRoute = require('./api/product/product.router')
 const app = express();
 dotenv.config();
 
-
+//converting json object to javascript obj
 app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
 app.use("/api/user", userRoute)
 app.use("/api/product", productRoute)
 
