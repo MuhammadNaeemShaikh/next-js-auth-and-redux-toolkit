@@ -36,6 +36,8 @@ module.exports = {
     try {
       const { page, limit } = req.params;
 
+      console.log(page, limit);
+
       //getting products
       const products = await product.getProduct(page, limit);
 
@@ -114,16 +116,16 @@ module.exports = {
   },
   deleteProduct: async (req, res) => {
     try {
-      const { _id } = req.params;
+      const { id } = req.params;
 
-      if (!_id) {
+      if (!id) {
         return res.status(400).json({
           success: 0,
           message: 'Product id required for deleting the products',
         });
       }
 
-      const isProductDlt = await product.deleteProduct(_id);
+      const isProductDlt = await product.deleteProduct({id});
 
       if (isProductDlt) {
         return res.status(200).json({

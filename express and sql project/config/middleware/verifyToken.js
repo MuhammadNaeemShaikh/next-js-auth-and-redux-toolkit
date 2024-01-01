@@ -34,7 +34,7 @@ module.exports.adminAuth = async (req, res, next) => {
         } else {
             return res.status(403).json({
                 success: 0,
-                message: "You are not Authorized to do this"
+                message: "You are not Allowed to do this"
             })
         }
 
